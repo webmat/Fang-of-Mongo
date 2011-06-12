@@ -7,7 +7,6 @@ import re
 import base64
 import pymongo
 from pymongo import json_util
-import handle_plugins
 from exceptions import CmdException
 
 try:
@@ -82,11 +81,7 @@ def ui_page(request, host, port):
     """
         mongo user interface
     """
-    plugins = handle_plugins.load_plugins()
     build_info = {}
-    #for plugin in plugins:
-    #    print 'plugin', plugin.name, plugin.js
-    
     try:
         conn = pymongo.Connection(host = host, port = int(port))
         build_info = conn['admin'].command({"buildinfo": 1})
@@ -99,7 +94,6 @@ def ui_page(request, host, port):
     return render_to_response('fom/templates/mongo_ui_page.html',
             {
               'connection_params' : { 'host' : host, 'port' : port, 'db' : None, 'coll' : None },
-              'plugins' : plugins,
               'build_info' : build_info,
             }
             )

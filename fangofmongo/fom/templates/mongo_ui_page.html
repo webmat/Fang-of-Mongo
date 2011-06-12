@@ -6,18 +6,11 @@
 <script src="/static/fom/js/fangofmongo_utils.js"></script>
 <script src="/static/fom/js/fangofmongo_ui.js"></script>
 
-{% if plugins %}
-  <script type="text/javascript">
-  function fom_init_plugins(){
-  {% for plugin in plugins %}
-    {% if plugin.js %}
-    <!--js for plugin {{ plugin.name }} -->
-    {{ plugin.js|safe }}
-    {% endif %}
-  {% endfor %}
-  };
-  </script>
-{% endif %}
+<script src="/static/fom/js/fom_about.js"></script>
+<script src="/static/fom/js/mongo_collection.js"></script>
+<script src="/static/fom/js/mongo_colllist.js"></script>
+<script src="/static/fom/js/mongo_dblist.js"></script>
+
 <script> try { fom_init_mongo_ui(); } catch(e) { alert(e); };  </script>
 {% endblock %}
 
@@ -26,11 +19,8 @@
 {% block css %}
 {{ block.super }}
 <link rel=stylesheet href="/static/fom/css/fangofmongo_ui.css" type="text/css"/>
-{% if plugins %}
-  {% for plugin in plugins %}
-    {% if plugin.css %} <!--css for plugin {{ plugin.name }} --> {{ plugin.css|safe }}{% endif %}
-  {% endfor %}
-{% endif %}
+<link rel=stylesheet href="/static/fom/css/fom_about.css" type="text/css"/>
+<link rel=stylesheet href="/static/fom/css/mongo_collection.css" type="text/css"/>
 {% endblock %}
 
 {% block header %}
@@ -57,10 +47,7 @@
 {{ block.super }}
 <!-- mongo_ui_container -->
 <div id="mongo_ui_container">
-{% if plugins %}
-  {% for plugin in plugins %}
-    {% if plugin.html %} <!--html for plugin {{ plugin.name }} --> {{ plugin.html|safe }}{% endif %}
-  {% endfor %}
-{% endif %}
+ {% include 'fom_about.html' %}
+ {% include 'mongo_collection.html' %}
 </div>
 {% endblock content %}

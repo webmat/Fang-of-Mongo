@@ -1006,7 +1006,11 @@ $.format.locale({
                 });
 
 //initialize all plugins
-fom_init_plugins();
+fom_init_about();
+fom_init_coll_info();
+fom_init_coll_list();
+fom_init_db_list();
+
 //tell everybody we are starting the party
 $(window).load( function() {
     $('#mongo_ui_header_tools_bus').fom_bus('signal', 'app_init', this, {} );

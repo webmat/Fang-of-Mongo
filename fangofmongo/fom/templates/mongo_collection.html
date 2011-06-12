@@ -1,0 +1,89 @@
+<div id='mongo_ui_coll_info'>
+  <div id='mongo_ui_coll_info_dialog'>
+  <div id="mongo_ui_coll_info_tabs">
+    <ul>
+      <li><a href="#mongo_ui_coll_info_tab_data">Data</a></li>
+      <li><a href="#mongo_ui_coll_info_tab_stats">Stats</a></li>
+      <li><a href="#mongo_ui_coll_info_tab_indexes">Indexes</a></li>
+    </ul>
+    <div id="mongo_ui_coll_info_tab_data">
+      <div id='mongo_ui_coll_info_data'>
+
+        <div id='mongo_ui_coll_info_paginator'>
+          <table>
+            <tr>
+              <td>
+                <input type="checkbox" id="mongo_ui_coll_info_data_expand" /><label for="mongo_ui_coll_info_data_expand">Expand</label>
+              </td>
+              <td>
+                <button id="mongo_ui_coll_info_data_refresh" >Refresh</button>
+              </td>
+
+              <td>
+                <button id="mongo_ui_coll_info_data_prev">Prev</button>
+              </td>
+              <td>
+                <button id="mongo_ui_coll_info_data_next">Next</button>
+              </td>
+              <td class="label">
+                Per page:
+              </td>
+              <td>
+                <input id="mongo_ui_coll_info_data_limit" type="text" value="10"/>
+              </td>
+              <td class="label">
+                Page:
+              </td>
+              <td>
+                <input id="mongo_ui_coll_info_data_page" type="text" value="1"/>
+                #items: <span id="mongo_ui_coll_info_data_page_count"></span>
+              </td>
+              <td class="label">
+                Sort:
+              </td>
+              <td>
+                <select id="mongo_ui_coll_info_data_sort_options">
+                  <option value=''>unsorted</option>
+                  <option value=''>custom sort</option>
+                  <option value='[["_id",1]]'>_id ASC</option>
+                  <option value='[["_id",-1]]'>_id DESC</option>
+                </select>
+              </td>
+              <td>
+                <input type="text" id="mongo_ui_coll_info_data_sort" value=""/>
+              </td>
+            </tr>
+          </table>
+          <table>
+
+
+
+
+
+
+            <tr>
+              <td colspan="9">
+              </td>
+            </tr>
+
+
+          </table>
+        </div>
+        <div id="mongo_ui_coll_info_data_area">
+          <div id="mongo_ui_coll_info_query_builder"></div>
+          <div id='mongo_ui_coll_info_data_container'></div>
+        </div>
+      </div>
+    </div>
+    <div id="mongo_ui_coll_info_tab_stats">
+      <div id='mongo_ui_coll_info_stats'>
+      </div>
+    </div>
+    <div id="mongo_ui_coll_info_tab_indexes">
+      <div id='mongo_ui_coll_info_indexes'>
+      </div>
+    </div>
+  </div>
+
+  </div><!-- mongo_ui_coll_info_dialog -->
+</div><!-- mongo_ui_coll_info -->
