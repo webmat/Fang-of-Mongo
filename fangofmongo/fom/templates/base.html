@@ -3,17 +3,42 @@
 <head>
 {% block meta %}
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Fang of Mongo: MongoDB  web interface</title>
+<meta name="keywords" content="fang of mongo, fangofmongo, mongo, mongodb, django"/>
+<meta name="author" content="maciej dziardziel (fiedzia@gmail.com"/>
 {% endblock meta %}
-{% block js %}{% endblock js %}
-{% block css %}{% endblock css %}
+{% block js %}
+<script src="/static/contrib/jquery/jquery-1.4.2.js"></script>
+<script src="/static/contrib/jquery/jquery.format-1.0.js"></script>
+<script src="/static/contrib/base64/webtoolkit_base64.js"></script>
+
+<script src="/static/contrib/json2.js"></script>
+
+<script src="/static/contrib/jquery-ui/js/jquery-ui-1.8.custom.min.js"></script>
+<script src="/static/contrib/jquery-ui/js/jqueryui_combobox.js"></script>
+
+{% endblock js %}
+{% block css %}
+<link rel=stylesheet href="/static/contrib/jquery-ui/css/ui-lightness/jquery-ui-1.8.custom.css" type="text/css"/>
+{% endblock css %}
 
 
 </head>
 <body>
-{% block header %}{% endblock header %}
-{% block content %}{% endblock content%}
-{% block footer %}{% endblock footer %}
+{% block header %}
+{% endblock header %}
+{% block content %}
+
+<div id='errormsg'>
+<p>
+If you see this mesage, then either you have javascript disabled, or something else went wrong.<br/>
+Please turn js on and refresh this page.
+</p>
+</div>
+
+{% endblock content %}
+{% block footer %}
+{% endblock footer %}
 
 </body>
 </html>
-

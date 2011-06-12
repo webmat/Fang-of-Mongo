@@ -1,4 +1,4 @@
-{% extends 'base2.html' %}
+{% extends 'base.html' %}
 
 {% block js %}
 {{ block.super }}
@@ -13,5 +13,35 @@
 
 {% block content %}
 {{ block.super }}
-{% include 'fom/templates/start_form.html' %}
+<div id="start_dialog" title="welcome to fang of mongo">
+    <p id="validatetips">
+    <b>fang of mongo</b> is a dead simple web interface to <a href="http://www.mongodb.org">mongo</a> database,<br/>
+    written in <a href="http://www.djangoproject.com/">django</a> by maciej dziardziel (<a href="mailto:fiedzia@gmail.com">fiedzia@gmail.com</a>).<br/>
+    you will need modern webbrowser to use it. i hope you will find it usefull.
+    </p>
+
+    <form>
+    <fieldset>
+        <!--<label for="db_engine">engine</label>
+        <select name="db_engine" id="db_engine">
+            <option value="mongo">mongo</option>
+        </select>-->
+        <label for="db_host">host</label>
+        <input type="text" name="db_host" id="db_host" value="localhost" class="text ui-widget-content ui-corner-all" />
+        <label for="db_port">port</label>
+        <input type="text" name="db_port" id="db_port" value="27017" class="text ui-widget-content ui-corner-all" />
+
+
+        <label for="db_login">login</label>
+        <input type="test" name="db_login" id="db_login" value="" class="text ui-widget-content ui-corner-all" />
+
+
+        <label for="db_password">password</label>
+        <input type="password" name="db_password" id="db_password" value="" class="text ui-widget-content ui-corner-all" />
+    </fieldset>
+    </form>
+    <p>
+        for connecting with default mongo installation, just click the button.
+    </p>
+</div>
 {% endblock content %}
