@@ -13,7 +13,7 @@ h1 { font-size: 1.2em; margin: .6em 0; }
 
 .fom_ui_list_item {
     text-align:center; padding: 5px;
-    border-color: orange;
+    border-color: #C00;
     border-size:1px;
     border-style: solid;
     margin-top: 1px;
@@ -34,7 +34,7 @@ h1 { font-size: 1.2em; margin: .6em 0; }
 
 .fom_ui_list_items {width: 99%; height: 99%;  overflow: auto;}
 .fom_ui_list_item:hover { background-color: #89CFF0; } /* babyblue */
-.fom_ui_list_item_selected { background-color:orange;}
+.fom_ui_list_item_selected { background-color:#C00;}
 
 .fom_ui_json_data > .fom_ui_json_container:nth-child(even) > .fom_ui_json_value_document,
 .fom_ui_json_data > .fom_ui_json_container:nth-child(even) > .fom_ui_json_value_oid
@@ -125,7 +125,7 @@ h1 { font-size: 1.2em; margin: .6em 0; }
 
 #mongo_ui_header {
     color: white;
-    background-color: orange;
+    background-color: #C00;
     font-size: 20pt;
     font-weight: bold;
     -webkit-border-radius: 12px; /* Safari, Chrome */
@@ -133,7 +133,7 @@ h1 { font-size: 1.2em; margin: .6em 0; }
     -moz-border-radius: 12px; /* Firefox */
     border-radius: 12px;
     padding-left: 10px;
-    text-shadow: #6374AB 2px -2px 2px;
+    text-shadow: #6374AB 2px 2px 2px;
 
     box-shadow: 0 1px 2px rgba(0,0,0,0.5); 
     -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.5);
@@ -142,13 +142,13 @@ h1 { font-size: 1.2em; margin: .6em 0; }
     background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255,255,255,.2)), color-stop(0.5, rgba(150,150,150,.2)), to(rgba(0,0,0,.0)));
     
 }
-#mongo_ui_header_tools > div { display: inline; font-size: 10pt; color: white; background-color: darkorange; }
+#mongo_ui_header_tools > div { display: inline; font-size: 10pt; color: white; background-color: #600; }
 #mongo_ui_header_tools > div :hover { color: red; font-size: 30pt; } 
 #mongo_ui_header_db_info { font-size: 10pt;}
 #fom_console_input { width: 80%;}
 
 #fom_dialog_db > div, #fom_dialog_coll > div  { font-size: 12pt; border: 4px; padding: 8px;}
-#fom_dialog_db > div :hover, #fom_dialog_coll > div :hover { background-color:orange; }
+#fom_dialog_db > div :hover, #fom_dialog_coll > div :hover { background-color:#C00; }
 
 #mongo_logo {position: absolute; left: 80%; top:90%; border-style: none;}
 #mongo_logo img {border-style: none;}
