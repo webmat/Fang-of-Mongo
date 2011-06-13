@@ -12,19 +12,23 @@ h1 { font-size: 1.2em; margin: .6em 0; }
 
 #mongo_ui_lists{
     float: left;
-    width: 30%;
+    width: 20%;
 }
 #mongo_ui_coll_info {
     float: left;
-    width: 70%;
+    width: 80%;
+}
+
+#mongo_ui_lists h2 {
+    color: #c00;
 }
 
 .fom_ui_list_item {
     text-align:center; padding: 5px;
     border-color: #C00;
     border-size:1px;
-    border-style: solid;
-    margin-top: 1px;
+    margin: 5px 0px;
+    font-size: 1.2em;
     -webkit-border-radius: 12px; /* Safari, Chrome */
     -khtml-border-radius: 12px;    /* Konqueror */
     -moz-border-radius: 12px; /* Firefox */
