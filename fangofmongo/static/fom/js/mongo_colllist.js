@@ -4,7 +4,6 @@ function fom_init_coll_list() {
       $.ui.fom_plugin.prototype._init.call(this); // call the original function
       var this_obj = this;
       $('#mongo_ui_header_tools_bus').fom_bus('add_listener', this);
-      $('#mongo_ui_container').append("<div id='mongo_ui_collection_list'></div>");
       $('#mongo_ui_collection_list').fom_ui_list({
         'title':'Collections',
         'div_id': 'mongo_ui_collection_list',
@@ -17,14 +16,6 @@ function fom_init_coll_list() {
         this_obj.options['collection'] = collname;
         $('#mongo_ui_header_tools_bus').fom_bus('signal', 'collection_selected', this, {'collection': collname } );
       });
-      //menu button
-      $('#mongo_ui_menu').append('<input type="checkbox" id="mongo_ui_collection_list_menu_btn" checked="checked"/><label for="mongo_ui_collection_list_menu_btn">Collections list</label>');
-
-      $('#mongo_ui_collection_list_menu_btn').button();
-
-      var dialog_id = '#' + $('#mongo_ui_collection_list').fom_ui_list('option','div_id')+'_dialog';
-
-      $('#mongo_ui_collection_list_menu_btn').click(function () { $(dialog_id).dialog('isOpen')? $(dialog_id).dialog('close') : $(dialog_id).dialog('open');});
       $('#mongo_ui_collection_list').fom_ui_list('get_ui_element', 'search_input').focus(function() {
         $('#mongo_ui_header_tools_bus').fom_bus('signal', 'help_needed', this_obj, { book:'fom_collection_list', topic:'search_collection_list'  } );
       });

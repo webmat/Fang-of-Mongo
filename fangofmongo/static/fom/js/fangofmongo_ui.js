@@ -488,26 +488,17 @@ Fom_item_list = $.extend({}, $.ui.fom_object.prototype,{
         
         $('#' + this.options['div_id']).append("\
         <div id='" + this.dialog_id + "'>\
-          <div style='width: 99%; height: 99%; display: table;'>\
-            <div style='display: table-row;  height: auto;'>\
-              <div style=' display: table-cell; height: 99%; '>\
                 <div class='fom_ui_note'></div>\
                 <div class='fom_ui_list_items'>\
                   <div style='width: 99%;' id='" + this.item_list_id + "'></div>\
                 </div>\
-              </div>\
-            </div>\
-            <div style='display: table-row; height: auto;'>\
-              <div class='search_toolbox' style=' height: auto; display: table-cell;'>\
+              <div class='search_toolbox'>\
                 <input type='text' name='" + this.input_id +"' id='" + this.input_id + "'/>\
                 <button id='" + this.search_id + "'>Search</button>\
                 <button id='" + this.clear_id + "'>Clear</button>\
-              </div>\
             </div>\
-            <div style='display: table-row; height: auto;'>\
-              <div class='toolbox' style='height: auto; display: table-cell;'></div>\
+            <div class='toolbox'>\
             </div>\
-          </div>\
         </div>");
         
         var my_id = '#' + this.options['div_id'];
@@ -519,20 +510,7 @@ Fom_item_list = $.extend({}, $.ui.fom_object.prototype,{
         $(this.toolbox).hide();
         $(this.search_toolbox).hide();
      
-        //dialog - item list
-        $('#' + this.options['div_id'] + '_dialog').dialog({
-                autoOpen: true,
-                height: 300,
-                width: 200,
-                modal: false,
-                closeOnEscape: false,
-                title: this.options['title'],
-                buttons: {},
-                position : this.options['position'],
-                close: function() {$(my_id).trigger('close', []);},
 
-        }); //end of dialog
-        
         //show/hide toolbox (set of icons witl operations on selected element)
         
         $('#' + this.dialog_id).hover(function(event, ui) {

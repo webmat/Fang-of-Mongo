@@ -83,37 +83,6 @@ function fom_init_coll_info() {
       });
 
       $('#mongo_ui_coll_info_query_builder').fom_query_builder({div_id:'mongo_ui_coll_info_query_builder'});
-
-      //dialog - collection info
-      $('#' + this.options['div_id'] + '_dialog').dialog({
-        autoOpen: true,
-        height: 650,
-        width: 800,
-        modal: false,
-        closeOnEscape: false,
-        buttons: {},
-        title: 'Collection info',
-        position : [220,100],
-        close: function () {
-          $('#mongo_ui_coll_info_menu_btn').attr('checked',false);
-          $('#mongo_ui_coll_info_menu_btn').button('refresh');
-        },
-
-
-      }); //end of dialog
-      //$('#' + this.options['div_id'] + '_dialog').dialog('disable');
-
-      //menu button
-      $('#mongo_ui_menu').append('<input type="checkbox" id="mongo_ui_coll_info_menu_btn" checked="checked"/><label for="mongo_ui_coll_info_menu_btn">Collection info</label>');
-
-      $('#mongo_ui_coll_info_menu_btn').button();
-      var dialog_id = '#' + this.dialog_id;
-      $('#mongo_ui_coll_info_menu_btn').click(
-        function () {
-          $(dialog_id).dialog('isOpen')? $(dialog_id).dialog('close') : $(dialog_id).dialog('open');
-        }
-      );
-      //$('#mongo_ui_coll_info_paginator table').find('td').css('vertical-align', 'top');
       if (this.options.disabled) {
         this.disable();
      };

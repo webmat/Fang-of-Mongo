@@ -14,7 +14,7 @@
 #mongo_ui_coll_info_data_next { width: 70px;}
 
 
-#mongo_ui_coll_info_tabs {position: absolute; width: 96%; height: 96%;  }
+/*#mongo_ui_coll_info_tabs {position: absolute; width: 96%; height: 96%;  }*/
 #mongo_ui_coll_info_tab_data {height: inherit;}
 #mongo_ui_coll_info_tab_stats {height: inherit;}
 #mongo_ui_coll_info_tab_indexes {height: inherit;}

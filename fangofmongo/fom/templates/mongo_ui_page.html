@@ -47,7 +47,9 @@
 {{ block.super }}
 <!-- mongo_ui_container -->
 <div id="mongo_ui_container">
- {% include 'fom_about.html' %}
+  <div id='mongo_ui_database_list'></div>
+  <div id='mongo_ui_collection_list'></div>
  {% include 'mongo_collection.html' %}
+ {% include 'fom_about.html' %}
 </div>
 {% endblock content %}

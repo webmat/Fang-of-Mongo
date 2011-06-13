@@ -4,7 +4,6 @@ function fom_init_db_list() {
       $.ui.fom_plugin.prototype._init.call(this); // call the original function
       var this_obj = this;
       $('#mongo_ui_header_tools_bus').fom_bus('add_listener', this );
-      $('#mongo_ui_container').append("<div id='mongo_ui_database_list'></div>");
       $('#mongo_ui_database_list').fom_ui_list({
         'title':'Databases',
         'div_id': 'mongo_ui_database_list',
@@ -23,11 +22,6 @@ function fom_init_db_list() {
       $('#mongo_ui_database_list').fom_ui_list('get_ui_element', 'search_input').focus(function() {
         $('#mongo_ui_header_tools_bus').fom_bus('signal', 'help_needed', this_obj, { book:'fom_db_list', topic:'search_db_list'  } );
       });
-      //menu button
-      $('#mongo_ui_menu').append('<input type="checkbox" id="mongo_ui_database_list_menu_btn" checked="checked"/><label for="mongo_ui_database_list_menu_btn">Show dbs</label>');
-      $('#mongo_ui_database_list_menu_btn').button();
-      var dialog_id = '#' + $('#mongo_ui_database_list').fom_ui_list('option','div_id')+'_dialog';
-      $('#mongo_ui_database_list_menu_btn').click(function () { $(dialog_id).dialog('isOpen')? $(dialog_id).dialog('close') : $(dialog_id).dialog('open'); $('#mongo_ui_database_list_menu_btn').val(false); });
       $('#mongo_ui_database_list').fom_ui_list('get_ui_element','toolbox')
         .html(
           $('<button>+</button>').addClass('fom_ui_list_toolbox_btn').addClass('new_db').click(function(){
