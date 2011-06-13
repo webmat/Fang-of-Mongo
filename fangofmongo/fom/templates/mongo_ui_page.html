@@ -28,7 +28,12 @@
 
 <div id="mongo_ui_header">
 
-<span id="mongo_ui_header_name">Fang of Mongo</span> <span id="mongo_ui_header_db_info">Server info: {% if build_info %}  {% templatetag openbrace %} version: {{ build_info.version }}, bits: {{ build_info.bits }} {% templatetag closebrace %}  {% endif %}</span>
+<span id="mongo_ui_header_name">Fang of Mongo</span> <span id="mongo_ui_header_db_info">Server info:
+  {% if build_info %}
+    {% templatetag openbrace %} version: {{ build_info.version }}, bits: {{ build_info.bits }} {% templatetag closebrace %}
+  {% endif %}
+  <a href="#" id="mongo_ui_about_btn">About FoM</a>
+</span>
 </div>
 <span id="mongo_ui_header_tools">
     <span id="mongo_ui_header_tools_bus"></span>
@@ -47,8 +52,10 @@
 {{ block.super }}
 <!-- mongo_ui_container -->
 <div id="mongo_ui_container">
-  <div id='mongo_ui_database_list'></div>
-  <div id='mongo_ui_collection_list'></div>
+  <div id='mongo_ui_lists'>
+    <div id='mongo_ui_database_list'></div>
+    <div id='mongo_ui_collection_list'></div>
+  </div>
  {% include 'mongo_collection.html' %}
  {% include 'fom_about.html' %}
 </div>

@@ -27,14 +27,10 @@ function fom_init_about() {
 
       }); //end of dialog
 
-
-      //menu button
-      $('#mongo_ui_menu').append('<button id="mongo_ui_about_menu_btn">About</button>');
-      $('#mongo_ui_about_menu_btn').button();
       var dialog_id = '#' + this.dialog_id;
-      $('#mongo_ui_about_menu_btn').click(
+      $('#mongo_ui_about_btn').click(
         function () {
-          $(dialog_id).dialog('isOpen')? $(dialog_id).dialog('close') : $(dialog_id).dialog('open');
+          $(dialog_id).dialog('open');
         }
       );
 
