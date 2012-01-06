@@ -25,6 +25,11 @@ INSTALLATION:
 
             download archive and unpack into directory of your choice
 
+      install dependencies
+          - sudo easy_install django
+          - sudo easy_install pymongo
+          - sudo easy_install bson
+
       after downloading, open console, cd to directory where the files are and type:
 
           cd fangofmongo
